@@ -1,0 +1,584 @@
+html, body {
+    min-height: 100%;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  header {
+    overflow: hidden;
+  }
+  header h1 {
+    font-family: "Oooh Baby", cursive;
+    color: rgba(209, 209, 209, 0.8784313725);
+  }
+  header .row, header .nav {
+    height: 100%;
+  }
+  
+  .collapse {
+    width: 100%;
+  }
+  
+  .navbar-toggler {
+    border-color: #ffffff;
+  }
+  .navbar-togglerfocus {
+    box-shadow: none;
+  }
+  
+  .h_inicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_inicio.jpg);
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  .h_tienda {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_tienda.jpg);
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  .h_galeria {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_galeria.jpg);
+    background-size: cover;
+    background-position-y: 58%;
+  }
+  
+  .h_nosotros {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_nosotros.jpg);
+    background-size: cover;
+    background-position-y: 67%;
+  }
+  
+  .h_contacto {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/background_contacto.jpg);
+    background-size: cover;
+    background-position-y: 59%;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .logo {
+    aspect-ratio: 1/1;
+    object-fit: contain;
+  }
+  
+  .main_index h2 {
+    font-weight: 600;
+  }
+  
+  .btn, .formulario input:last-child, .btn-compra, .btn-tienda {
+    height: auto;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #718FA6;
+    border: solid 1px #000000;
+    border-radius: 1000000px;
+    padding: 0.3rem 1rem;
+  }
+  .btn:hover, .formulario input:hover:last-child, .btn-compra:hover, .btn-tienda:hover {
+    background-color: #8aaec9;
+  }
+  
+  .btn-tienda {
+    font-weight: 500;
+  }
+  
+  .t_product {
+    box-shadow: -2px -2px 15px 0.5px #000000;
+    margin-top: 4rem;
+    height: auto;
+  }
+  .t_product h2 {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  
+  .price_product h3 {
+    font-weight: 600;
+  }
+  
+  .product_photo {
+    border-radius: 10px 0px 0px 10px;
+    object-fit: cover;
+  }
+  
+  .galeria img {
+    box-shadow: -1px -1px 10px 0.5px #000000;
+    border-radius: 15px;
+  }
+  
+  .fotografo a {
+    color: #000000;
+    text-decoration: none;
+  }
+  .fotografo a:hover {
+    text-decoration: underline;
+  }
+  
+  .carrusel {
+    box-shadow: -2px -2px 15px 0.5px #000000;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .carrusel ul {
+    width: 600%;
+  }
+  .carrusel li {
+    width: 100%;
+    list-style: none;
+  }
+  .carrusel img {
+    animation: slide 30s infinite;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  @keyframes slide {
+    0% {
+      margin-left: 0;
+    }
+    13% {
+      margin-left: 0;
+    }
+    16% {
+      margin-left: -100%;
+    }
+    29% {
+      margin-left: -100%;
+    }
+    32% {
+      margin-left: -200%;
+    }
+    45% {
+      margin-left: -200%;
+    }
+    48% {
+      margin-left: -300%;
+    }
+    61% {
+      margin-left: -300%;
+    }
+    64% {
+      margin-left: -400%;
+    }
+    77% {
+      margin-left: -400%;
+    }
+    80% {
+      margin-left: -500%;
+    }
+    93% {
+      margin-left: -500%;
+    }
+  }
+  .main_nosotros h2 {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  
+  .formulario {
+    box-shadow: -2px -2px 15px 0.5px #000000;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #000000;
+    padding: 25px;
+  }
+  .formulario label {
+    margin: 7px 0px 3px 0px;
+  }
+  .formulario input {
+    height: auto;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    border: solid 1px #000000;
+  }
+  .formulario textarea {
+    border-radius: 5px;
+    border: solid 1px #000000;
+  }
+  .formulario input:focus, .formulario textarea:focus {
+    border: solid 1px #88a5fc;
+    outline: none;
+  }
+  .formulario input::placeholder, .formulario textarea::placeholder {
+    padding: 5px;
+  }
+  .formulario input:last-child {
+    margin-top: 15px;
+  }
+  
+  .redes {
+    font-weight: 600;
+    text-align: center;
+  }
+  .redes a img {
+    width: 100%;
+  }
+  
+  footer {
+    background-color: #a69171;
+  }
+  footer h3 {
+    color: #000000;
+  }
+  
+  .foot a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .foot a:hover {
+    text-decoration: underline;
+  }
+  
+  .foot img {
+    margin-right: 10px;
+  }
+  
+  .line {
+    border-left: solid 1px #000000;
+  }
+  
+  @media screen and (min-width: 2000px) {
+    header {
+      height: 60vh;
+    }
+    header h1 {
+      font-size: 7rem;
+    }
+    .nav-link {
+      font-size: 2.8rem;
+    }
+    .main_index h2 {
+      font-size: 1.9rem;
+    }
+    .main_index p {
+      font-size: 1.2rem;
+    }
+    .btn-tienda {
+      font-size: 1.7rem;
+    }
+    .t_product {
+      border-radius: 25px;
+    }
+    .t_product h2 {
+      font-size: 2rem;
+    }
+    .t_product p {
+      font-size: 2rem;
+    }
+    .price_product h3 {
+      font-size: 2rem;
+    }
+    .price_product img {
+      width: 10%;
+    }
+    .btn-compra {
+      font-size: 2rem;
+    }
+    .fotografo {
+      font-size: 1.5rem;
+    }
+    .main_nosotros h2 {
+      font-size: 1.9rem;
+    }
+    .main_nosotros p {
+      font-size: 1.2rem;
+    }
+    .redes p {
+      font-size: 2rem;
+    }
+    .redes a {
+      width: 6%;
+    }
+    .formulario {
+      border-radius: 25px;
+    }
+    .formulario label {
+      font-size: 1.5rem;
+    }
+    .formulario input {
+      border-radius: 15px;
+      font-size: 1.5rem;
+    }
+    .formulario textarea {
+      height: 200px;
+      border-radius: 15px;
+      font-size: 1.5rem;
+    }
+    .formulario input::placeholder, .formulario textarea::placeholder {
+      font-size: 1.5rem;
+    }
+    footer h3 {
+      font-size: 1.2rem;
+    }
+    .foot a {
+      font-size: 1.2rem;
+    }
+    .foot img {
+      width: 20px;
+    }
+    .copyright {
+      font-size: 1.2rem;
+    }
+  }
+  @media screen and (max-width: 2000px) {
+    header h1 {
+      font-size: 4rem;
+    }
+    .nav-link {
+      font-size: 2rem;
+    }
+    .main_index h2 {
+      font-size: 1.9rem;
+    }
+    .main_index p {
+      font-size: 1.2rem;
+    }
+    .btn-tienda {
+      font-size: 1.5rem;
+    }
+    .t_product {
+      border-radius: 20px;
+    }
+    .t_product h2 {
+      font-size: 1.5rem;
+    }
+    .t_product p {
+      font-size: 1.5rem;
+    }
+    .price_product h3 {
+      font-size: 1.5rem;
+    }
+    .btn-compra {
+      font-size: 1.5rem;
+    }
+    .fotografo {
+      font-size: 1.2rem;
+    }
+    .main_nosotros h2 {
+      font-size: 1.9rem;
+    }
+    .main_nosotros p {
+      font-size: 1.2rem;
+    }
+    .redes p {
+      font-size: 1.5rem;
+    }
+    .redes a {
+      width: 6%;
+    }
+    .formulario {
+      border-radius: 15px;
+    }
+    .formulario label {
+      font-size: 1.2rem;
+    }
+    .formulario input {
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+    .formulario textarea {
+      height: 200px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+    .formulario input::placeholder, .formulario textarea::placeholder {
+      font-size: 1.2rem;
+    }
+    footer h3 {
+      font-size: 1rem;
+    }
+    .foot a {
+      font-size: 1rem;
+    }
+    .copyright {
+      font-size: 1rem;
+    }
+    .foot img {
+      width: 18px;
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    header h1 {
+      font-size: 4rem;
+    }
+    .nav-link {
+      font-size: 1.5rem;
+    }
+    .t_product h2 {
+      font-size: 1.2rem;
+    }
+    .t_product p {
+      font-size: 1.2rem;
+    }
+    .price_product h3 {
+      font-size: 1.2rem;
+    }
+    .btn-compra {
+      font-size: 1.2rem;
+    }
+    .main_nosotros h2 {
+      font-size: 1.2rem;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .btn-tienda {
+      font-size: 1.5rem;
+    }
+    .t_product {
+      border-radius: 10px;
+    }
+    .t_product h2 {
+      font-size: 1rem;
+    }
+    .t_product p {
+      font-size: 1rem;
+    }
+    .price_product h3 {
+      font-size: 1rem;
+    }
+    .btn-compra {
+      font-size: 1rem;
+    }
+    .fotografo {
+      font-size: 1rem;
+    }
+    .redes p {
+      font-size: 1rem;
+    }
+    .redes a {
+      width: 8%;
+    }
+    .formulario label {
+      font-size: 1rem;
+    }
+    .formulario input {
+      font-size: 1rem;
+    }
+    .formulario input::placeholder, .formulario textarea::placeholder {
+      font-size: 1rem;
+    }
+    .formulario textarea {
+      font-size: 1rem;
+    }
+    .formulario textarea {
+      height: 100px;
+    }
+    footer h3 {
+      font-size: 0.7rem;
+    }
+    .foot a {
+      font-size: 0.7rem;
+    }
+    .copyright {
+      font-size: 0.7rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 3rem;
+    }
+    .nav-link {
+      font-size: 1rem;
+    }
+    .main_index h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .main_index p {
+      font-size: 1rem;
+    }
+    .btn-tienda {
+      font-size: 0.7rem;
+    }
+    .t_product:first-child {
+      margin-top: 0px;
+    }
+    .fotografo {
+      font-size: 0.7rem;
+      text-decoration: underline;
+    }
+    .main_nosotros h2 {
+      font-size: 1.5rem;
+    }
+    .main_nosotros p {
+      font-size: 1rem;
+    }
+    .redes p {
+      font-size: 1rem;
+    }
+    .formulario label {
+      font-size: 0.7rem;
+    }
+    .formulario input {
+      font-size: 0.7rem;
+    }
+    .formulario input::placeholder, .formulario textarea::placeholder {
+      font-size: 0.7rem;
+    }
+    .formulario textarea {
+      font-size: 0.7rem;
+    }
+    .foot img {
+      width: 16px;
+    }
+  }
+  @media screen and (min-width: 575px) {
+    .navbar {
+      height: 100%;
+    }
+    header {
+      height: 70vh;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    .nav-link {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .main_index h2 {
+      font-size: 1rem;
+    }
+    .main_index p {
+      font-size: 1rem;
+    }
+    .t_product h2 {
+      font-size: 1rem;
+    }
+    .t_product p {
+      font-size: 0.7rem;
+    }
+    .price_product h3 {
+      font-size: 0.7rem;
+    }
+    .btn-compra {
+      font-size: 0.7rem;
+    }
+    .main_nosotros h2 {
+      font-size: 1rem;
+    }
+    .main_nosotros p {
+      font-size: 1rem;
+    }
+    .redes a {
+      width: 7%;
+    }
+  }
+  @media screen and (max-width: 374px) {
+    .container-toggler {
+      width: 25%;
+    }
+    .logo {
+      width: 35%;
+    }
+  }
+  
+  /*# sourceMappingURL=styles.css.map */
+  
