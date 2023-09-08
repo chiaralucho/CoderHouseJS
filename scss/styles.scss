@@ -1,0 +1,730 @@
+@import "backgrounds";
+@import "fonts";
+
+html,
+body {
+  min-height: 100%;
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+  overflow: hidden;
+  h1 {
+    font-family: "Oooh Baby", cursive;
+    color: #d1d1d1e0;
+  }
+  .row,
+  .nav {
+    height: 100%;
+  }
+}
+
+.collapse {
+  width: 100%;
+}
+
+//menu hamburguesa
+.navbar-toggler {
+  border-color: #ffffff;
+  &focus {
+    box-shadow: none;
+  }
+}
+
+//header backgrounds
+@each $page, $positionValue in $pagesBg {
+  .h_#{$page} {
+    background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+      url(../images/background_#{$page}.jpg);
+    background-size: cover;
+    background-position-y: $positionValue;
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.logo {
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+
+.main_index {
+  h2 {
+    font-weight: 600;
+  }
+}
+
+//generalButtons
+.btn {
+  height: auto;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #718fa6;
+  border: solid 1px #000000;
+  border-radius: 1000000px;
+  padding: 0.3rem 1rem;
+  &:hover {
+    background-color: #8aaec9;
+  }
+}
+
+.btn-tienda {
+  @extend .btn;
+  font-weight: 500;
+}
+
+.btn_pedido{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: auto;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #77a671;
+    border-radius: 10px;
+    padding: 0.3rem 1rem;
+    &:hover {
+      background-color: #9cc98a;
+    }
+}
+
+.container_pago{
+    display: none;
+    position: fixed;
+    height: 400px;
+    width: 800px;
+    top: 100px;
+    left: 300px;
+    background-color: #4b5a72;
+    border-radius: 50px;
+    h3{
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        color: #ffffff;
+    }
+}
+.t_product {
+  box-shadow: -2px -2px 15px 0.5px #000000;
+  margin-top: 4rem;
+  height: auto;
+  .product_photo {
+    border-radius: 10px 0px 0px 10px;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  .price_product h3 {
+    font-weight: 600;
+  }
+
+  .btn-compra {
+    @extend .btn;
+  }
+
+  .QTYselector {
+    display: none;
+    button {
+      height: 50%;
+      text-align: center;
+    }
+    h3 {
+      font-size: 20px;
+    }
+  }
+}
+
+.galeria img {
+  box-shadow: -1px -1px 10px 0.5px #000000;
+  border-radius: 15px;
+}
+
+.fotografo a {
+  color: #000000;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.carrusel {
+  box-shadow: -2px -2px 15px 0.5px #000000;
+  border-radius: 10px;
+  overflow: hidden;
+  ul {
+    width: 600%;
+  } //100% * photo
+  li {
+    width: 100%;
+    list-style: none;
+  }
+  img {
+    animation: slide 30s infinite;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+@keyframes slide {
+  //start 1sec-slide(3.3%) & 4sec-photo(13.3%)
+  //1st photo
+  0% {
+    margin-left: 0;
+  }
+  13% {
+    margin-left: 0;
+  }
+  //2nd photo
+  16% {
+    margin-left: -100%;
+  }
+  29% {
+    margin-left: -100%;
+  }
+  //3rd photo
+  32% {
+    margin-left: -200%;
+  }
+  45% {
+    margin-left: -200%;
+  }
+  //4th photo
+  48% {
+    margin-left: -300%;
+  }
+  61% {
+    margin-left: -300%;
+  }
+  //5th photo
+  64% {
+    margin-left: -400%;
+  }
+  77% {
+    margin-left: -400%;
+  }
+  //6th photo
+  80% {
+    margin-left: -500%;
+  }
+  93% {
+    margin-left: -500%;
+  }
+}
+
+.main_nosotros h2 {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.formulario {
+  box-shadow: -2px -2px 15px 0.5px #000000;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #000000;
+  padding: 25px;
+  label {
+    margin: 7px 0px 3px 0px;
+  }
+
+  input {
+    height: auto;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    border: solid 1px #000000;
+  }
+
+  textarea {
+    border-radius: 5px;
+    border: solid 1px #000000;
+  }
+
+  input:focus,
+  textarea:focus {
+    border: solid 1px #88a5fc;
+    outline: none;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    padding: 5px;
+  }
+
+  input:last-child {
+    @extend .btn;
+    margin-top: 15px;
+  }
+}
+
+.redes {
+  font-weight: 600;
+  text-align: center;
+  a img {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #a69171;
+  h3 {
+    color: #000000;
+  }
+}
+
+.foot a {
+  text-decoration: none;
+  color: #000000;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.foot img {
+  margin-right: 10px;
+}
+
+.line {
+  border-left: solid 1px #000000;
+}
+
+@media screen and (min-width: 2000px) {
+  header {
+    height: 60vh;
+  }
+
+  header h1 {
+    font-size: 7rem;
+  }
+
+  .nav-link {
+    font-size: $title_fsize_xxl;
+  }
+
+  .main_index h2 {
+    font-size: $title_fsize_lg;
+  }
+
+  .main_index p {
+    font-size: $text_fsize_md;
+  }
+
+  .btn-tienda {
+    font-size: $title_fsize_md;
+  }
+
+  .t_product {
+    border-radius: 25px;
+  }
+
+  .t_product h2 {
+    font-size: $text_fsize_xl;
+  }
+
+  .t_product p {
+    font-size: $text_fsize_xl;
+  }
+
+  .price_product h3 {
+    font-size: $text_fsize_xl;
+  }
+
+  .price_product img {
+    width: 10%;
+  }
+
+  .btn-compra {
+    font-size: $text_fsize_xl;
+  }
+
+  .fotografo {
+    font-size: $text_fsize_lg;
+  }
+
+  .main_nosotros h2 {
+    font-size: $title_fsize_lg;
+  }
+
+  .main_nosotros p {
+    font-size: $text_fsize_md;
+  }
+
+  .redes p {
+    font-size: $text_fsize_xl;
+  }
+
+  .redes a {
+    width: 6%;
+  }
+
+  .formulario {
+    border-radius: 25px;
+    label {
+      font-size: $text_fsize_lg;
+    }
+    input {
+      border-radius: 15px;
+      font-size: $text_fsize_lg;
+    }
+    textarea {
+      height: 200px;
+      border-radius: 15px;
+      font-size: $text_fsize_lg;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      font-size: $text_fsize_lg;
+    }
+  }
+
+  footer h3 {
+    font-size: $text_fsize_md;
+  }
+
+  .foot a {
+    font-size: $text_fsize_md;
+  }
+
+  .foot img {
+    width: 20px;
+  }
+
+  .copyright {
+    font-size: $text_fsize_md;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  header h1 {
+    font-size: 4rem;
+  }
+
+  .nav-link {
+    font-size: $text_fsize_xl;
+  }
+
+  .main_index h2 {
+    font-size: $title_fsize_lg;
+  }
+
+  .main_index p {
+    font-size: $text_fsize_md;
+  }
+
+  .btn-tienda {
+    font-size: $title_fsize_sm;
+  }
+
+  .t_product {
+    border-radius: 20px;
+  }
+
+  .t_product h2 {
+    font-size: $text_fsize_lg;
+  }
+
+  .t_product p {
+    font-size: $text_fsize_lg;
+  }
+
+  .price_product h3 {
+    font-size: $text_fsize_lg;
+  }
+
+  .btn-compra {
+    font-size: $text_fsize_lg;
+  }
+
+  .fotografo {
+    font-size: $text_fsize_md;
+  }
+
+  .main_nosotros h2 {
+    font-size: $title_fsize_lg;
+  }
+
+  .main_nosotros p {
+    font-size: $text_fsize_md;
+  }
+
+  .redes p {
+    font-size: $text_fsize_lg;
+  }
+
+  .redes a {
+    width: 6%;
+  }
+
+  .formulario {
+    border-radius: 15px;
+    label {
+      font-size: $text_fsize_md;
+    }
+    input {
+      border-radius: 5px;
+      font-size: $text_fsize_md;
+    }
+    textarea {
+      height: 200px;
+      border-radius: 5px;
+      font-size: $text_fsize_md;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      font-size: $text_fsize_md;
+    }
+  }
+  footer h3 {
+    font-size: $text_fsize_sm;
+  }
+
+  .foot a {
+    font-size: $text_fsize_sm;
+  }
+
+  .copyright {
+    font-size: $text_fsize_sm;
+  }
+
+  .foot img {
+    width: 18px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  header h1 {
+    font-size: 4rem;
+  }
+
+  .nav-link {
+    font-size: $text_fsize_lg;
+  }
+
+  .t_product h2 {
+    font-size: $text_fsize_md;
+  }
+
+  .t_product p {
+    font-size: $text_fsize_md;
+  }
+
+  .price_product h3 {
+    font-size: $text_fsize_md;
+  }
+
+  .btn-compra {
+    font-size: $text_fsize_md;
+  }
+
+  .main_nosotros h2 {
+    font-size: $text_fsize_md;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .btn-tienda {
+    font-size: $title_fsize_sm;
+  }
+
+  .t_product {
+    border-radius: 10px;
+  }
+
+  .t_product h2 {
+    font-size: $text_fsize_sm;
+  }
+
+  .t_product p {
+    font-size: $text_fsize_sm;
+  }
+
+  .price_product h3 {
+    font-size: $text_fsize_sm;
+  }
+
+  .btn-compra {
+    font-size: $text_fsize_sm;
+  }
+
+  .fotografo {
+    font-size: $text_fsize_sm;
+  }
+
+  .redes p {
+    font-size: $text_fsize_sm;
+  }
+
+  .redes a {
+    width: 8%;
+  }
+
+  .formulario label {
+    font-size: $text_fsize_sm;
+  }
+
+  .formulario input {
+    font-size: $text_fsize_sm;
+  }
+
+  .formulario input::placeholder,
+  .formulario textarea::placeholder {
+    font-size: $text_fsize_sm;
+  }
+
+  .formulario textarea {
+    font-size: $text_fsize_sm;
+  }
+
+  .formulario textarea {
+    height: 100px;
+  }
+
+  footer h3 {
+    font-size: $text_fsize_ssm;
+  }
+
+  .foot a {
+    font-size: $text_fsize_ssm;
+  }
+
+  .copyright {
+    font-size: $text_fsize_ssm;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  .nav-link {
+    font-size: $text_fsize_sm;
+  }
+
+  .main_index h2 {
+    font-size: $title_fsize_sm;
+    font-weight: 600;
+  }
+
+  .main_index p {
+    font-size: $text_fsize_sm;
+  }
+
+  .btn-tienda {
+    font-size: $text_fsize_ssm;
+  }
+
+  .t_product:first-child {
+    margin-top: 0px;
+  }
+
+  .fotografo {
+    font-size: $text_fsize_ssm;
+    text-decoration: underline;
+  }
+
+  .main_nosotros h2 {
+    font-size: $title_fsize_sm;
+  }
+
+  .main_nosotros p {
+    font-size: $text_fsize_sm;
+  }
+
+  .redes p {
+    font-size: $text_fsize_sm;
+  }
+
+  .formulario label {
+    font-size: $text_fsize_ssm;
+  }
+
+  .formulario input {
+    font-size: $text_fsize_ssm;
+  }
+
+  .formulario input::placeholder,
+  .formulario textarea::placeholder {
+    font-size: $text_fsize_ssm;
+  }
+
+  .formulario textarea {
+    font-size: $text_fsize_ssm;
+  }
+
+  .foot img {
+    width: 16px;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .navbar {
+    height: 100%;
+  }
+
+  header {
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .nav-link {
+    font-size: $text_fsize_md;
+    margin-bottom: 0.5rem;
+  }
+
+  .main_index h2 {
+    font-size: $title_fsize_ssm;
+  }
+
+  .main_index p {
+    font-size: $title_fsize_ssm;
+  }
+
+  .t_product h2 {
+    font-size: $title_fsize_ssm;
+  }
+
+  .t_product p {
+    font-size: $text_fsize_ssm;
+  }
+
+  .price_product h3 {
+    font-size: $text_fsize_ssm;
+  }
+
+  .btn-compra {
+    font-size: $text_fsize_ssm;
+  }
+
+  .main_nosotros h2 {
+    font-size: $title_fsize_ssm;
+  }
+
+  .main_nosotros p {
+    font-size: $title_fsize_ssm;
+  }
+
+  .redes a {
+    width: 7%;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .container-toggler {
+    width: 25%;
+  }
+
+  .logo {
+    width: 35%;
+  }
+}
