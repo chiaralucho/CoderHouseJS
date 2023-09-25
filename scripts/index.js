@@ -173,7 +173,7 @@ function handleCompraClick(i, productID) {
     addToCart(
       productsArray[productID].id,
       productsArray[productID].title,
-      parseInt(totalNumber.textContent),
+      productsArray[productID].precio,
       parseInt(QTYnumber[i].textContent),
       "add"
     );
@@ -192,7 +192,7 @@ function handleCompraClick(i, productID) {
       addToCart(
         productsArray[productID].id,
         productsArray[productID].title,
-        parseInt(totalNumber.textContent),
+        productsArray[productID].precio,
         parseInt(QTYnumber[i].textContent),
         "add"
       );
@@ -209,7 +209,7 @@ function handleCompraClick(i, productID) {
       addToCart(
         productsArray[productID].id,
         productsArray[productID].title,
-        parseInt(totalNumber.textContent),
+        productsArray[productID].precio,
         parseInt(QTYnumber[i].textContent),
         "remove"
       );
@@ -226,7 +226,7 @@ function handleCompraClick(i, productID) {
       addToCart(
         productsArray[productID].id,
         productsArray[productID].title,
-        parseInt(totalNumber.textContent),
+        productsArray[productID].precio,
         parseInt(QTYnumber[i].textContent),
         "add"
       );
