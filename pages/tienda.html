@@ -27,6 +27,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" integrity="sha512-6S2HWzVFxruDlZxI3sXOZZ4/eJ8AcxkQH1+JjSe/ONCEqR9L4Ysq5JdT5ipqtzU7WHalNwzwBv+iE51gNHJNqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/styles.css" />
     <title>Malliy - Tienda</title>
   </head>
@@ -95,290 +96,27 @@
               </li>
             </ul>
           </div>
-          <h1 class="col-12 text-center m-0 mt-5">Tienda</h1>
+  
+            <div class="col-11 d-flex flex-row m-0 mt-5 mb-2 total">
+              <h3 class=" mx-3 my-0">🛒Total: $<span class= "totalNumber">0</span></h3>
+              <button class="btn_pedido">Cerrar pedido</button>
+          </div>
         </nav>
       </div>
     </header>
     <main class="main_tienda container-fluid px-2 px-md-4 py-5 py-lg-5">
-        <button class="btn_pedido ">Cerrar pedido</button>
-        <div class="col-12 container_pago">
-            <h3 class="mt-2">Tu compra:</h2>
-        </div>
+      <div class="col-12 container_pago">
+        <h3 class="mt-2">Tu compra:</h2>
+          <ul id="liProducts"></ul>
+          <p class="ms-3"><Strong>Total Buy: $<span id= "totalCart">0</Strong></span></p>
+          <button id="buyBtn" class="col-3">Pagar</button>
+
+    </div>
       <!--Productos-->
       <div
         class="row justify-content-evenly justify-content-xxl-center container-products"
       >
-        <div
-          class="d-flex col-10 col-sm-8 col-md-7 col-lg-5 col-xxl-4 t_product p-0"
-        >
-          <img
-            class="col-5 product_photo"
-            src="../images/pan_molde.jpg"
-            alt="Pan de molde"
-          />
-          <div
-            class="col d-flex flex-column align-items-center justify-content-between px-1 px-sm-3 py-4"
-          >
-            <h2 class="mb-2">Pan de molde</h2>
-            <p class="col-12 text-center mb-2">
-              De corteza blanda y dorada, miga suave y esponjosa. Ideal para tus
-              tostadas de todas las mañanas.
-            </p>
-            <div class="col-12">
-              <div
-                class="d-flex col-12 align-items-center justify-content-center price_product mb-2"
-              >
-                <img class="col-1" src="../images/carrito_compras.png" alt="" />
-                <h3 class="mb-0 ms-2">$9999</h3>
-              </div>
-              <div class="col-12 d-flex justify-content-center">
-                <div
-                  class="QTYselector flex-row justify-content-center align-items-center mt-2"
-                >
-                  <button
-                    class="btn btnMas d-flex justify-content-center align-items-center"
-                  >
-                    +
-                  </button>
-                  <h3 class="mx-3 QTYnumber QTYnumber my-0">1</h3>
-                  <button
-                    class="btn btnMenos d-flex justify-content-center align-items-center"
-                  >
-                    -
-                  </button>
-                </div>
-                <button class="btn-compra col-auto col-xxl-11">
-                  Agregar al carrito
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="d-flex col-10 col-sm-8 col-md-7 col-lg-5 col-xxl-4 offset-xxl-1 t_product p-0"
-        >
-          <img
-            class="col-5 product_photo"
-            src="../images/pan_ciabatta.jpg"
-            alt="Pan ciabatta"
-          />
-          <div
-            class="col d-flex flex-column align-items-center justify-content-between px-1 px-sm-3 py-4"
-          >
-            <h2 class="mb-2">Pan ciabatta</h2>
-            <p class="col-12 text-center mb-2">
-              Caracterizado por su miga aereada y sabor suave que permite
-              apreciar mejor el sabor de lo que se encuentre en su interior,
-              ¡Usalo en sandwichs!
-            </p><div class="col-12">
-                <div
-                  class="d-flex col-12 align-items-center justify-content-center price_product mb-2"
-                >
-                  <img class="col-1" src="../images/carrito_compras.png" alt="" />
-                  <h3 class="mb-0 ms-2">$9999</h3>
-                </div>
-                <div class="col-12 d-flex justify-content-center">
-                  <div
-                    class="QTYselector flex-row justify-content-center align-items-center mt-2"
-                  >
-                    <button
-                      class="btn btnMas d-flex justify-content-center align-items-center"
-                    >
-                      +
-                    </button>
-                    <h3 class="mx-3 QTYnumber my-0">1</h3>
-                    <button
-                      class="btn btnMenos d-flex justify-content-center align-items-center"
-                    >
-                      -
-                    </button>
-                  </div>
-                  <button class="btn-compra col-auto col-xxl-11">
-                    Agregar al carrito
-                  </button>
-                </div>
-              </div>
-          </div>
-        </div>
-        <div
-          class="d-flex col-10 col-sm-8 col-md-7 col-lg-5 col-xxl-4 t_product p-0"
-        >
-          <img
-            class="col-5 product_photo"
-            src="../images/pan_hamburgesa.jpg"
-            alt="Pan de hamburgesa"
-          />
-          <div
-            class="col d-flex flex-column align-items-center justify-content-between px-1 px-sm-3 py-4"
-          >
-            <h2 class="mb-2">Pan hamburgesa</h2>
-            <p class="col-12 text-center mb-2">
-              Pan redondo y con semillas, de textura esponjosa que acompaña un
-              sabor especial en tus hamburguesas.
-            </p><div class="col-12">
-                <div
-                  class="d-flex col-12 align-items-center justify-content-center price_product mb-2"
-                >
-                  <img class="col-1" src="../images/carrito_compras.png" alt="" />
-                  <h3 class="mb-0 ms-2">$9999</h3>
-                </div>
-                <div class="col-12 d-flex justify-content-center">
-                  <div
-                    class="QTYselector flex-row justify-content-center align-items-center mt-2"
-                  >
-                    <button
-                      class="btn btnMas d-flex justify-content-center align-items-center"
-                    >
-                      +
-                    </button>
-                    <h3 class="mx-3 QTYnumber my-0">1</h3>
-                    <button
-                      class="btn btnMenos d-flex justify-content-center align-items-center"
-                    >
-                      -
-                    </button>
-                  </div>
-                  <button class="btn-compra col-auto col-xxl-11">
-                    Agregar al carrito
-                  </button>
-                </div>
-              </div>
-          </div>
-        </div>
-        <div
-          class="d-flex col-10 col-sm-8 col-md-7 col-lg-5 col-xxl-4 offset-xxl-1 t_product p-0"
-        >
-          <img
-            class="col-5 product_photo"
-            src="../images/rapiditas.jpg"
-            alt="Rapiditas"
-          />
-          <div
-            class="col d-flex flex-column align-items-center justify-content-between px-1 px-sm-3 py-4"
-          >
-            <h2 class="mb-2">Rapiditas</h2>
-            <p class="col-12 text-center mb-2">
-              Clásicas y prácticas para una comida rápida, ¡acompañalas con lo
-              que mas te guste!
-            </p><div class="col-12">
-                <div
-                  class="d-flex col-12 align-items-center justify-content-center price_product mb-2"
-                >
-                  <img class="col-1" src="../images/carrito_compras.png" alt="" />
-                  <h3 class="mb-0 ms-2">$9999</h3>
-                </div>
-                <div class="col-12 d-flex justify-content-center">
-                  <div
-                    class="QTYselector flex-row justify-content-center align-items-center mt-2"
-                  >
-                    <button
-                      class="btn btnMas d-flex justify-content-center align-items-center"
-                    >
-                      +
-                    </button>
-                    <h3 class="mx-3 QTYnumber my-0">1</h3>
-                    <button
-                      class="btn btnMenos d-flex justify-content-center align-items-center"
-                    >
-                      -
-                    </button>
-                  </div>
-                  <button class="btn-compra col-auto col-xxl-11">
-                    Agregar al carrito
-                  </button>
-                </div>
-              </div>
-          </div>
-        </div>
-        <div
-          class="d-flex col-10 col-sm-8 col-md-7 col-lg-5 col-xxl-4 t_product p-0"
-        >
-          <img
-            class="col-5 product_photo"
-            src="../images/pionono.jpg"
-            alt="Pionono"
-          />
-          <div
-            class="col d-flex flex-column align-items-center justify-content-between px-1 px-sm-3 py-4"
-          >
-            <h2 class="mb-2">Pionono</h2>
-            <p class="col-12 text-center mb-2">
-              De masa super esponjosa, suave y húmeda. Su especial toque de
-              sabor dulce le da originalidad a tus comidas o postres.
-            </p><div class="col-12">
-                <div
-                  class="d-flex col-12 align-items-center justify-content-center price_product mb-2"
-                >
-                  <img class="col-1" src="../images/carrito_compras.png" alt="" />
-                  <h3 class="mb-0 ms-2">$9999</h3>
-                </div>
-                <div class="col-12 d-flex justify-content-center">
-                  <div
-                    class="QTYselector flex-row justify-content-center align-items-center mt-2"
-                  >
-                    <button
-                      class="btn btnMas d-flex justify-content-center align-items-center"
-                    >
-                      +
-                    </button>
-                    <h3 class="mx-3 QTYnumber my-0">1</h3>
-                    <button
-                      class="btn btnMenos d-flex justify-content-center align-items-center"
-                    >
-                      -
-                    </button>
-                  </div>
-                  <button class="btn-compra col-auto col-xxl-11">
-                    Agregar al carrito
-                  </button>
-                </div>
-              </div>
-          </div>
-        </div>
-        <div
-          class="d-flex col-10 col-sm-8 col-md-7 col-lg-5 col-xxl-4 offset-xxl-1 t_product p-0"
-        >
-          <img
-            class="col-5 product_photo"
-            src="../images/prepizza2.jpg"
-            alt="Prepizzas"
-          />
-          <div
-            class="col d-flex flex-column align-items-center justify-content-between px-1 px-sm-3 py-4"
-          >
-            <h2 class="mb-2">Mini-Prepizza</h2>
-            <p class="col-12 text-center mb-2">
-              Prepizza individual con salsa de tomate lista para cocinar.
-            </p><div class="col-12">
-                <div
-                  class="d-flex col-12 align-items-center justify-content-center price_product mb-2"
-                >
-                  <img class="col-1" src="../images/carrito_compras.png" alt="" />
-                  <h3 class="mb-0 ms-2">$9999</h3>
-                </div>
-                <div class="col-12 d-flex justify-content-center">
-                  <div
-                    class="QTYselector flex-row justify-content-center align-items-center mt-2"
-                  >
-                    <button
-                      class="btn btnMas d-flex justify-content-center align-items-center"
-                    >
-                      +
-                    </button>
-                    <h3 class="mx-3 QTYnumber my-0">1</h3>
-                    <button
-                      class="btn btnMenos d-flex justify-content-center align-items-center"
-                    >
-                      -
-                    </button>
-                  </div>
-                  <button class="btn-compra col-auto col-xxl-11">
-                    Agregar al carrito
-                  </button>
-                </div>
-              </div>
-          </div>
-        </div>
+       
       </div>
     </main>
     <footer class="container-fluid px-4 pt-2 pb-0">
@@ -431,6 +169,8 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../scripts/index.js"></script>
   </body>
 </html>

@@ -76,51 +76,93 @@ header {
   font-weight: 500;
 }
 
-.btn_pedido{
-    position: fixed;
+.total{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+
+  h3{
+
+    color: #ffffff;
+    .totalNumber{
+      font-weight: 100;
+    }
+  }
+  .btn_pedido{
     right: 20px;
-    bottom: 20px;
     height: auto;
     color: #ffffff;
     text-decoration: none;
-    background-color: #77a671;
+    background-color: #4b5a72;
     border-radius: 10px;
+    border: none;
     padding: 0.3rem 1rem;
     &:hover {
-      background-color: #9cc98a;
+      background-color: #718fa6;
     }
 }
+}
+
+#toast-container > div{opacity: 1;}
+.toast-error{background-color: #4b6072;}
 
 .container_pago{
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
     position: fixed;
     height: 400px;
     width: 800px;
     top: 100px;
     left: 300px;
-    background-color: #4b5a72;
+    background-color: #ffffff;
     border-radius: 50px;
+    box-shadow: -1px -1px 10px 1px #000000;;
     h3{
         text-align: center;
         font-size: 24px;
         font-weight: 600;
-        color: #ffffff;
+        color: #000000;
+    }
+    p{
+      font-size: 20px;
+    }
+    button{
+      align-self: center;
+      right: 20px;
+      height: auto;
+      color: #ffffff;
+      text-decoration: none;
+      background-color: #08ad8a;
+      border-radius: 10px;
+      border: none;
+      padding: 0.3rem 1rem;
+      &:hover {
+        background-color: #2daa8f;
+      }
+     
     }
 }
 .t_product {
   box-shadow: -2px -2px 15px 0.5px #000000;
   margin-top: 4rem;
-  height: auto;
-  .product_photo {
-    border-radius: 10px 0px 0px 10px;
-    object-fit: cover;
-  }
+  height: 350px;
 
+
+  .product_photo {
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+    height: 50%;
+  }
+  .content_product{
+    height: auto;
   h2 {
     font-weight: bolder;
     text-decoration: underline;
   }
-  .price_product h3 {
+  .price_product, .price_symbol{
+    font-size: 22px;
     font-weight: 600;
   }
 
@@ -138,6 +180,7 @@ header {
       font-size: 20px;
     }
   }
+}
 }
 
 .galeria img {
